@@ -224,7 +224,7 @@ def add_padding_and_save_instances(all_mlm_token_sequences, all_mlm_pred_positio
         assert len(input_id) <= config.max_seq_len
 
         while len(input_id) != config.max_seq_len:
-            input_id.append(padding_token_id)  # padding_token_id는 리스트 [100]
+            input_id.append(padding_token_id)  # padding_token_id: integer 0
             input_mask.append(0)
             all_segment_ids[instance_index].append(padding_token_id)
         input_ids_list.append(input_id)
