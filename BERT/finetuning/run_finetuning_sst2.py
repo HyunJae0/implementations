@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
     config = PreTrainingBertConfig()
     tokenizer = HuggingFaceTokenizer(config.tokenizer_path)
-    pretrained_model_path = 'best_model-7.533361999356017.pt'
+    pretrained_model_path = 'pretraining_model.pt'
 
     sst2 = load_dataset('stanfordnlp/sst2')
     tokenizer = HuggingFaceTokenizer('bert-base-uncased').tokenizer
